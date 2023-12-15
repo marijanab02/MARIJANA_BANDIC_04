@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>JS DOM</title>
+</head>
+<body>
+ <script type="text/javascript">
+    function operacije(znak){
+        var operand1=parseFloat(document.getElementById("operand1").value);
+        var operand2=parseFloat(document.getElementById("operand2").value);
+
+        switch(znak){
+            case '+':
+                alert(operand1+operand2);
+                break;
+            case '-':
+                alert(operand1-operand2);
+                break;
+            case '*':
+                alert(operand1*operand2);
+                break;
+            case '/':
+                alert(operand1/operand2);
+                break;
+            default: alert("Kriva operacija");
+        }
+    }
+    function trig(znak){
+        var operand1=parseFloat(document.getElementById("operand1").value);
+        var operand2=parseFloat(document.getElementById("operand2").value);
+
+        switch(znak){
+            case 'sin':
+                alert(Math.sin(operand1) + " " + Math.sin(operand2));
+                break;
+            case 'cos':
+                alert(Math.cos(operand1) + " " + Math.cos(operand2));
+                break;
+            case 'tan':
+                alert(Math.tan(operand1) + " " + Math.tan(operand2));
+                break;
+            default: alert("Kriva operacija");
+        }
+    }
+    function log(znak){
+        var operand1=parseFloat(document.getElementById("operand1").value);
+        var operand2=parseFloat(document.getElementById("operand2").value);
+
+        switch(znak){
+            case 'ln':
+                alert(Math.log(operand1) + " " + Math.log(operand2));
+                break;
+            case 'log':
+                alert(Math.log(operand1)/Math.log(10) + " " +Math.log(operand1)/Math.log(10));
+                break;
+            default: alert("Kriva operacija");
+        }
+    }
+    function potenciranje(znak){
+        var operand1=parseFloat(document.getElementById("operand1").value);
+        var operand2=parseFloat(document.getElementById("operand2").value);
+
+        alert(Math.pow(operand1, znak) + " " + Math.pow(operand2, znak));
+        
+    }
+    function potenciranje_n(){
+        var operand1=parseFloat(document.getElementById("operand1").value);
+        var operand2=parseFloat(document.getElementById("operand2").value);
+        var eksp=parseFloat(prompt("Unesi eksponent "));
+
+        alert(Math.pow(operand1, eksp) + " " + Math.pow(operand2, eksp));
+    }
+
+ </script>
+ <form>
+    <input type="text" id="operand1">
+    <label for="operand1"> operand1 </label><br/><br/>
+    <input type="text" id="operand2">
+    <label for="operand2"> operand2 </label><br/><br/>
+    <button type="button" onclick="operacije('+')">+</button>
+    <button type="button" onclick="operacije('-')">-</button>
+    <button type="button" onclick="operacije('*')">*</button>
+    <button type="button" onclick="operacije('/')">/</button><br/><br/>
+    <button type="button" onclick="trig('sin')">sin</button>
+    <button type="button" onclick="trig('cos')">cos</button>
+    <button type="button" onclick="trig('tan')">tan</button><br/><br/>
+    <button type="button" onclick="log('ln')">ln</button>
+    <button type="button" onclick="log('log')">log</button><br/><br/>
+    <button type="button" onclick="potenciranje('2')">^2</button>
+    <button type="button" onclick="potenciranje('3')">^3</button>
+    <button type="button" onclick="potenciranje_n()">^n</button>
+
+ </form>
+
+</body>
+</html>

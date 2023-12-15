@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>JS DOM</title>
+</head>
+<body>
+ <script type="text/javascript">
+    function izracunaj(){
+        const god = new Date().getFullYear();
+        const mj=new Date().getMonth() + 1;
+        const dan= new Date().getDate();
+        var rjesenje;
+
+        var godina_input=(document.getElementById("godina").value);
+        var mjesec_input=(document.getElementById("mjesec").value);
+        var dan_input=(document.getElementById("dan").value);
+        if(mj>mjesec_input || (mj==mjesec_input && dan>=dan_input)){
+                rjesenje=god-godina_input;
+        }
+        else{
+            rjesenje=god-godina_input-1;
+        }
+        alert("Imate " + rjesenje + " godina");
+    }
+ </script>
+  <form>
+    <label for="dan">Unesite dan (01-31) </label>
+    <input type="text" id="dan"><br/><br/>
+    <label for="mjesec">Unesite mjesec (01-12) </label>
+    <input type="text" id="mjesec"><br/><br/>
+    <label for="godina">Unesite godinu (npr. 1970) </label>
+    <input type="text" id="godina"><br/><br/>
+    <input type="submit" id="dugme" onclick="izracunaj();" value="Izracunaj">
+    
+
+ </form>
+</body>
+</html>

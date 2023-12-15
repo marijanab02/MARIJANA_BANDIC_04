@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>JavaScript DOM</title>
+</head>
+<body>
+ <script type="text/javascript">
+    var niz=[];
+    var ulaz=prompt("Unesi niz", "niz");
+    niz = ulaz.split(",");
+    for (var i=0; i<niz.length; i++) {
+        niz[i]=parseFloat(niz[i]);
+    }
+    var ar_sredina=0;
+    var geom_sredina=1;
+    for(var i=0; i<niz.length; i++){
+        ar_sredina+=niz[i];
+        geom_sredina=geom_sredina*niz[i];
+    }
+    ar_sredina=ar_sredina/niz.length;
+    geom_sredina=Math.pow(geom_sredina, (1/niz.length));
+
+    document.write("Aritmeticka sredina ovog niza je:" + ar_sredina + ", a geometrijska je: " + geom_sredina);
+ </script>
+</body>
+</html>

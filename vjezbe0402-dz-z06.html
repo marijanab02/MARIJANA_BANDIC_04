@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>JavaScript DOM</title>
+</head>
+<body>
+ <script type="text/javascript">
+    function zbroji(){
+        var x=document.getElementById("X").value;
+        var y=document.getElementById("Y").value;
+        x=parseFloat(x);
+        y=parseFloat(y);
+        var rezultat=x+y;
+        document.getElementById("REZULTAT").value=rezultat;
+    }
+ </script>
+ <form>
+    <label for="X">X = </label>
+    <input type="text" id="X"><br/>
+    <label for="Y">Y = </label>
+    <input type="text" id="Y">><br/><br/>
+    <input type="submit" id="dugme" onclick="zbroji();" value="Zbroji">
+    <hr><br/>
+    <label for="REZULTAT">REZULTAT = </label>
+    <input type="text" id="REZULTAT">
+
+ </form>
+</body>
+</html>

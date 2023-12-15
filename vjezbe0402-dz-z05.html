@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>JavaScript DOM</title>
+</head>
+<body>
+ <script type="text/javascript">
+    function provjera(){
+        var x=document.getElementById("Registracija").value;
+        if (x.match(/^([AEJKMOT]{1}[0-9]{2}-[AEJKMOT]{1}-[0-9]{3})$/)){
+            alert("Ispravan format registracijske oznake");
+        }
+        else alert("Neispravan format registracijske oznake");
+    }
+ </script>
+ <form>
+    <label for="Registracija">Unei registracijsku oznaku:  </label><br/><br/>
+    <input type="text" id="Registracija"></form><br/>
+    <input type="submit" id="dugme" onclick="provjera();" value="Submit">
+ </form>
+</body>
+</html>

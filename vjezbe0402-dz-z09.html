@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>JS DOM</title>
+</head>
+<body>
+ <script type="text/javascript">
+    var status=false;
+    function upali(){
+        
+        var slika1 = document.getElementById("slika1");
+        var slika2 = document.getElementById("slika2");
+        if(status){
+            slika1.src="on-removebg-preview.png";
+            slika2.src="zarulja_on_2.png";
+        }
+        else{
+            slika1.src="off-removebg-preview.png";
+            slika2.src="zarulja_off_2.png";
+        }
+        status=!status;
+    }
+ </script>
+    <img id="slika1" src="off-removebg-preview.png" onclick="upali()">
+    <img id="slika2" src="zarulja_off_2.png">
+</body>
+
+</html>

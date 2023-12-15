@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>JavaScript DOM</title>
+</head>
+<body>
+ <script type="text/javascript">
+    function ispis(){
+        var x=document.getElementById("Ocjena").value;
+        var y;
+        switch(x){
+            case '1': 
+                j="Nedovoljan 1";
+                break;
+            case '2': 
+                j="Dovoljan 2";
+                break;
+            case '3': 
+                j="Dobar 3";
+                break;
+            case '4': 
+                j="Vrlo dobar 4";
+                break;
+            case '5': 
+                j="Odlican 5";
+                break;
+            default:
+                j="Neispravan unos";
+        }
+    alert(j + "!");
+    }
+ </script>
+    <form>
+        <label for="Ocjena">Ocjena: </label><br/><br/>
+        <input type="text" id="Ocjena"></form><br/>
+        <input type="submit" id="dugme" onclick="ispis();" value="Submit">
+    </form>
+</body>
+</html>
